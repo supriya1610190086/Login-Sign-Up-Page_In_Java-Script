@@ -1,0 +1,12 @@
+{
+    "user": {
+        "username": "pihu",
+        "password": "Pihu@1232"
+    },
+    "profilo": {
+        "description": "I am Pihu gupta.",
+        "birth_date": "10 april 2001",
+        "Hobbies": "Holley ball play",
+        "Gender": "female"
+    }
+}

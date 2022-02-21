@@ -20,8 +20,8 @@ if (user == "sign up") {
                             var Gender = readlineSync.question("enter the gender :-")
                             console.log("congrates", user_name, "your are signed up successfully")
                             var user_details = { user: { "username": user_name, "password": password1 }, "profilo": { "description": description, "birth_date": Birth_date, "Hobbies": Hobbies, "Gender": Gender } }
-                            let file = JSON.stringify(user_details)
-                            fs.writeFileSync("user_details.txt ", file)
+                            let file = JSON.stringify(user_details, null, 4)
+                            fs.writeFileSync("user_details.JSON ", file)
                         } else {
                             console.log("Both  password are not same")
                         }
@@ -45,7 +45,7 @@ if (user == "sign up") {
     let readlineSync = require("readline-sync");
     user_name1 = readlineSync.question("enter the user name :-")
     password3 = readlineSync.question("enter the password :-")
-    var read = fs.readFileSync("user_details.txt ");
+    var read = fs.readFileSync("user_details.JSON ");
     data1 = JSON.parse(read)
     user_1 = data1['user']
     if (data1['user']['username'] == user_name1) {
